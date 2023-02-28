@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // This tasks will compile the current opened file using GCC
+        {
+            "label": "Compile C file",
+            "command": "gcc -v ${relativeFile} -o bin/${fileBasenameNoExtension}.out",
+            "type": "shell",
+            "args": [],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"
+        },
+
+        // This task will run your compiled C program, based on the current file opened 
+        {
+            "label": "Run compiled C file",
+            "type": "shell",
+            "command": "bin/${fileBasenameNoExtension}.out",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "clear": true
+            },
+            "group": "none"
+        }
+    ]
+}
