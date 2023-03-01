@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-void readFile(char *fileName);
+void processFileAndPrintByteLengthByChar(char *fileName);
 
 void main()
 {
     printf("Initiliazing FileReader...\n");
 
-    readFile("src/resources/testFile.txt");
+    processFileAndPrintByteLengthByChar("src/resources/testFile.txt");
 
     printf("Finishing FileReader...\n");
 }
 
-void readFile(char *fileName)
+void processFileAndPrintByteLengthByChar(char *fileName)
 {
     FILE *file;
 
@@ -39,5 +39,4 @@ void readFile(char *fileName)
     }
 
     fclose(file);
-    
 }
