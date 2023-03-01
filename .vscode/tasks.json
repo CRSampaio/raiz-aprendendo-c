@@ -4,7 +4,7 @@
         // This tasks will compile the current opened file using GCC
         {
             "label": "Compile C file",
-            "command": "gcc -v ${relativeFile} -o bin/${fileBasenameNoExtension}.out",
+            "command": "rm bin/${fileBasenameNoExtension}.out && gcc -v ${relativeFile} -o bin/${fileBasenameNoExtension}.out",
             "type": "shell",
             "args": [],
             "problemMatcher": [
@@ -28,7 +28,8 @@
                 "reveal": "always",
                 "clear": true
             },
-            "group": "none"
+            "group": "none",
+            
         }
     ]
 }
